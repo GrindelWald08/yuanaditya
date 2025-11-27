@@ -65,7 +65,7 @@ const Index = () => {
                 <Mail className="mr-2 h-4 w-4" />
                 Get in Touch
               </Button>
-              <Button variant="outline" size="lg" className="backdrop-blur-md bg-background/30 hover:bg-background/50 border-border/50">
+              <Button variant="outline" size="lg" className="backdrop-blur-md bg-background/30 hover:bg-accent/80 hover:border-accent border-border/50 transition-all">
                 View Work
               </Button>
             </div>
