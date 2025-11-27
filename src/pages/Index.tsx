@@ -44,11 +44,12 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/10">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 py-20">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+      <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),transparent)]"></div>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+          <div className="space-y-6 backdrop-blur-sm bg-card/30 p-8 rounded-2xl border border-border/50 shadow-2xl">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground">
               Yuan Aditya Prasetyo
             </h1>
@@ -60,44 +61,46 @@ const Index = () => {
               Specializing in web and mobile application design that combines aesthetics with functionality.
             </p>
             <div className="flex gap-4 pt-4">
-              <Button size="lg">
+              <Button size="lg" className="backdrop-blur-md bg-primary/90 hover:bg-primary border border-primary-foreground/20 shadow-lg hover:shadow-primary/50 transition-all">
                 <Mail className="mr-2 h-4 w-4" />
                 Get in Touch
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="backdrop-blur-md bg-background/30 hover:bg-background/50 border-border/50">
                 View Work
               </Button>
             </div>
             <div className="flex gap-4 pt-4">
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="backdrop-blur-md bg-card/30 hover:bg-card/50 border border-border/30">
                 <Figma className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="backdrop-blur-md bg-card/30 hover:bg-card/50 border border-border/30">
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="backdrop-blur-md bg-card/30 hover:bg-card/50 border border-border/30">
                 <Github className="h-5 w-5" />
               </Button>
             </div>
           </div>
           <div className="relative">
-            <div className="relative w-full max-w-md mx-auto">
+            <div className="relative w-full max-w-md mx-auto backdrop-blur-md bg-card/20 p-4 rounded-2xl border border-border/50 shadow-2xl">
               <img 
                 src={profileImage} 
                 alt="Yuan Aditya Prasetyo"
-                className="w-full h-auto rounded-lg shadow-2xl"
+                className="w-full h-auto rounded-lg shadow-xl"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-2xl pointer-events-none"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="px-6 py-20 bg-muted/50">
-        <div className="max-w-6xl mx-auto">
+      <section className="px-6 py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/30 to-transparent"></div>
+        <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-4xl font-bold text-foreground mb-6">About Me</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card>
+            <Card className="backdrop-blur-xl bg-card/40 border-border/50 hover:bg-card/60 transition-all hover:scale-105 shadow-xl">
               <CardHeader>
                 <CardTitle>Design Philosophy</CardTitle>
               </CardHeader>
@@ -107,7 +110,7 @@ const Index = () => {
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="backdrop-blur-xl bg-card/40 border-border/50 hover:bg-card/60 transition-all hover:scale-105 shadow-xl">
               <CardHeader>
                 <CardTitle>Tools & Skills</CardTitle>
               </CardHeader>
@@ -117,7 +120,7 @@ const Index = () => {
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="backdrop-blur-xl bg-card/40 border-border/50 hover:bg-card/60 transition-all hover:scale-105 shadow-xl">
               <CardHeader>
                 <CardTitle>Experience</CardTitle>
               </CardHeader>
@@ -132,20 +135,23 @@ const Index = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="px-6 py-20">
+      <section className="px-6 py-20 relative">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-foreground mb-12">Portfolio</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <img 
-                  src={item.image} 
-                  alt={item.title}
-                  className="w-full h-48 object-cover"
-                />
+              <Card key={index} className="overflow-hidden backdrop-blur-xl bg-card/40 border-border/50 hover:bg-card/60 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 transition-all group">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
+                </div>
                 <CardHeader>
-                  <div className="text-sm text-muted-foreground mb-2">{item.category}</div>
-                  <CardTitle>{item.title}</CardTitle>
+                  <div className="text-sm text-primary font-semibold mb-2">{item.category}</div>
+                  <CardTitle className="group-hover:text-primary transition-colors">{item.title}</CardTitle>
                   <CardDescription>{item.description}</CardDescription>
                 </CardHeader>
               </Card>
@@ -155,21 +161,24 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="px-6 py-20 bg-muted/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-6">Let's Work Together</h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Have a project in mind? Let's create something amazing together.
-          </p>
-          <Button size="lg">
-            <Mail className="mr-2 h-4 w-4" />
-            Contact Me
-          </Button>
+      <section className="px-6 py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="backdrop-blur-xl bg-card/40 border border-border/50 rounded-3xl p-12 shadow-2xl">
+            <h2 className="text-4xl font-bold text-foreground mb-6">Let's Work Together</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Have a project in mind? Let's create something amazing together.
+            </p>
+            <Button size="lg" className="backdrop-blur-md bg-primary/90 hover:bg-primary border border-primary-foreground/20 shadow-lg hover:shadow-primary/50 transition-all">
+              <Mail className="mr-2 h-4 w-4" />
+              Contact Me
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-8 border-t border-border">
+      <footer className="px-6 py-8 border-t border-border/50 backdrop-blur-xl bg-card/20">
         <div className="max-w-6xl mx-auto text-center text-muted-foreground">
           <p>© 2024 Yuan Aditya Prasetyo. All rights reserved.</p>
         </div>
