@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Figma, Linkedin, Github } from "lucide-react";
+import { Mail, Figma, Linkedin, Github, ExternalLink } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { AnimatedGradientMesh } from "@/components/AnimatedGradientMesh";
@@ -11,37 +11,43 @@ const Index = () => {
       title: "E-Commerce Mobile App",
       description: "Modern e-commerce application with seamless user experience",
       category: "Mobile Design",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
+      github: "https://github.com/yuanaditya/ecommerce-app"
     },
     {
       title: "SaaS Dashboard",
       description: "Analytics dashboard for B2B software platform",
       category: "Web Design",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      github: "https://github.com/yuanaditya/saas-dashboard"
     },
     {
       title: "Food Delivery App",
       description: "User-friendly food ordering and delivery interface",
       category: "Mobile Design",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+      github: "https://github.com/yuanaditya/food-delivery"
     },
     {
       title: "Fitness Tracking App",
       description: "Health and fitness monitoring application",
       category: "Mobile Design",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&q=80"
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&q=80",
+      github: "https://github.com/yuanaditya/fitness-tracker"
     },
     {
       title: "Portfolio Website",
       description: "Personal portfolio for creative professionals",
       category: "Web Design",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80"
+      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+      github: "https://github.com/yuanaditya/portfolio"
     },
     {
       title: "Banking App Redesign",
       description: "Modern interface for digital banking services",
       category: "Mobile Design",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      github: "https://github.com/yuanaditya/banking-app"
     }
   ];
 
@@ -150,7 +156,18 @@ const Index = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
                   </div>
                   <CardHeader>
-                    <div className="text-sm text-primary font-semibold mb-2">{item.category}</div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-primary font-semibold">{item.category}</span>
+                      <a 
+                        href={item.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <Github className="h-4 w-4" />
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </div>
                     <CardTitle className="group-hover:text-primary transition-colors">{item.title}</CardTitle>
                     <CardDescription>{item.description}</CardDescription>
                   </CardHeader>
