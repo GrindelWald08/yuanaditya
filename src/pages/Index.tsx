@@ -12,42 +12,48 @@ const Index = () => {
       description: "Modern e-commerce application with seamless user experience",
       category: "Mobile Design",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
-      github: "https://github.com/yuanaditya/ecommerce-app"
+      github: "https://github.com/yuanaditya/ecommerce-app",
+      figma: "https://figma.com/file/ecommerce-app"
     },
     {
       title: "SaaS Dashboard",
       description: "Analytics dashboard for B2B software platform",
       category: "Web Design",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-      github: "https://github.com/yuanaditya/saas-dashboard"
+      github: "https://github.com/yuanaditya/saas-dashboard",
+      figma: "https://figma.com/file/saas-dashboard"
     },
     {
       title: "Food Delivery App",
       description: "User-friendly food ordering and delivery interface",
       category: "Mobile Design",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
-      github: "https://github.com/yuanaditya/food-delivery"
+      github: "https://github.com/yuanaditya/food-delivery",
+      figma: "https://figma.com/file/food-delivery"
     },
     {
       title: "Fitness Tracking App",
       description: "Health and fitness monitoring application",
       category: "Mobile Design",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&q=80",
-      github: "https://github.com/yuanaditya/fitness-tracker"
+      github: "https://github.com/yuanaditya/fitness-tracker",
+      figma: "https://figma.com/file/fitness-tracker"
     },
     {
       title: "Portfolio Website",
       description: "Personal portfolio for creative professionals",
       category: "Web Design",
       image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
-      github: "https://github.com/yuanaditya/portfolio"
+      github: "https://github.com/yuanaditya/portfolio",
+      figma: "https://figma.com/file/portfolio"
     },
     {
       title: "Banking App Redesign",
       description: "Modern interface for digital banking services",
       category: "Mobile Design",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-      github: "https://github.com/yuanaditya/banking-app"
+      github: "https://github.com/yuanaditya/banking-app",
+      figma: "https://figma.com/file/banking-app"
     }
   ];
 
@@ -158,15 +164,26 @@ const Index = () => {
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm text-primary font-semibold">{item.category}</span>
-                      <a 
-                        href={item.github} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <Github className="h-4 w-4" />
-                        <ExternalLink className="h-3 w-3" />
-                      </a>
+                      <div className="flex items-center gap-3">
+                        <a 
+                          href={item.figma} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                          title="View Figma Design"
+                        >
+                          <Figma className="h-4 w-4" />
+                        </a>
+                        <a 
+                          href={item.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                          title="View GitHub Repository"
+                        >
+                          <Github className="h-4 w-4" />
+                        </a>
+                      </div>
                     </div>
                     <CardTitle className="group-hover:text-primary transition-colors">{item.title}</CardTitle>
                     <CardDescription>{item.description}</CardDescription>
