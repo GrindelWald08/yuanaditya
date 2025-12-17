@@ -61,22 +61,22 @@ const Index = () => {
               Specializing in web and mobile application design that combines aesthetics with functionality.
             </p>
             <div className="flex gap-4 pt-4">
-              <Button size="lg" className="backdrop-blur-md bg-primary/90 hover:bg-primary border border-primary-foreground/20 shadow-lg hover:shadow-primary/50 transition-all">
+              <Button size="lg" className="backdrop-blur-md bg-primary hover:bg-primary/80 text-primary-foreground border border-primary/50 shadow-lg hover:shadow-primary/50 transition-all">
                 <Mail className="mr-2 h-4 w-4" />
                 Get in Touch
               </Button>
-              <Button variant="outline" size="lg" className="backdrop-blur-md bg-background/30 hover:bg-accent/80 hover:border-accent border-border/50 transition-all">
+              <Button variant="outline" size="lg" className="backdrop-blur-md bg-card/40 hover:bg-primary hover:text-primary-foreground border-border/50 hover:border-primary transition-all">
                 View Work
               </Button>
             </div>
             <div className="flex gap-4 pt-4">
-              <Button variant="ghost" size="icon" className="backdrop-blur-md bg-card/30 hover:bg-card/50 border border-border/30">
+              <Button variant="ghost" size="icon" className="backdrop-blur-md bg-card/30 hover:bg-primary hover:text-primary-foreground border border-border/30 hover:border-primary transition-all">
                 <Figma className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="backdrop-blur-md bg-card/30 hover:bg-card/50 border border-border/30">
+              <Button variant="ghost" size="icon" className="backdrop-blur-md bg-card/30 hover:bg-primary hover:text-primary-foreground border border-border/30 hover:border-primary transition-all">
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="backdrop-blur-md bg-card/30 hover:bg-card/50 border border-border/30">
+              <Button variant="ghost" size="icon" className="backdrop-blur-md bg-card/30 hover:bg-primary hover:text-primary-foreground border border-border/30 hover:border-primary transition-all">
                 <Github className="h-5 w-5" />
               </Button>
             </div>
@@ -169,7 +169,7 @@ const Index = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Have a project in mind? Let's create something amazing together.
             </p>
-            <Button size="lg" className="backdrop-blur-md bg-primary/90 hover:bg-primary border border-primary-foreground/20 shadow-lg hover:shadow-primary/50 transition-all">
+            <Button size="lg" className="backdrop-blur-md bg-primary hover:bg-primary/80 text-primary-foreground border border-primary/50 shadow-lg hover:shadow-primary/50 transition-all">
               <Mail className="mr-2 h-4 w-4" />
               Contact Me
             </Button>
