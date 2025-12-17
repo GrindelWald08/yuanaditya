@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Mail, Figma, Linkedin, Github } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnimatedGradientMesh } from "@/components/AnimatedGradientMesh";
 
 const Index = () => {
   const portfolioItems = [
@@ -48,6 +49,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/10">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
+        <AnimatedGradientMesh variant="primary" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.1),transparent)]"></div>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
           <AnimatedSection>
@@ -100,7 +102,8 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="px-6 py-20 relative">
+      <section className="px-6 py-20 relative overflow-hidden">
+        <AnimatedGradientMesh variant="secondary" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/30 to-transparent"></div>
         <div className="max-w-6xl mx-auto relative z-10">
           <AnimatedSection>
@@ -128,8 +131,9 @@ const Index = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="px-6 py-20 relative">
-        <div className="max-w-6xl mx-auto">
+      <section className="px-6 py-20 relative overflow-hidden">
+        <AnimatedGradientMesh variant="accent" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <AnimatedSection>
             <h2 className="text-4xl font-bold text-foreground mb-12">Portfolio</h2>
           </AnimatedSection>
@@ -158,7 +162,8 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="px-6 py-20 relative">
+      <section className="px-6 py-20 relative overflow-hidden">
+        <AnimatedGradientMesh variant="primary" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <AnimatedSection>
