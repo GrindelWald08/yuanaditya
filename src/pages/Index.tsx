@@ -8,52 +8,84 @@ import { AnimatedGradientMesh } from "@/components/AnimatedGradientMesh";
 const Index = () => {
   const portfolioItems = [
     {
-      title: "E-Commerce Mobile App",
-      description: "Modern e-commerce application with seamless user experience",
+      title: "Money Tracker App",
+      description: "Personal finance management app with budget tracking and expense analytics",
       category: "Mobile Design",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
-      github: "https://github.com/yuanaditya/ecommerce-app",
-      figma: "https://figma.com/file/ecommerce-app"
+      image: "https://images.unsplash.com/photo-1554252116-ee59370d1f66?w=800&q=80",
+      github: "https://github.com/yuanaditya/money-tracker",
+      figma: "https://figma.com/file/money-tracker"
     },
     {
-      title: "SaaS Dashboard",
-      description: "Analytics dashboard for B2B software platform",
+      title: "Outdoor Rental Website",
+      description: "Equipment rental platform for camping, hiking, and outdoor adventures",
       category: "Web Design",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-      github: "https://github.com/yuanaditya/saas-dashboard",
-      figma: "https://figma.com/file/saas-dashboard"
+      image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80",
+      github: "https://github.com/yuanaditya/outdoor-rental",
+      figma: "https://figma.com/file/outdoor-rental"
     },
     {
-      title: "Food Delivery App",
-      description: "User-friendly food ordering and delivery interface",
-      category: "Mobile Design",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
-      github: "https://github.com/yuanaditya/food-delivery",
-      figma: "https://figma.com/file/food-delivery"
-    },
-    {
-      title: "Fitness Tracking App",
-      description: "Health and fitness monitoring application",
-      category: "Mobile Design",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&q=80",
-      github: "https://github.com/yuanaditya/fitness-tracker",
-      figma: "https://figma.com/file/fitness-tracker"
-    },
-    {
-      title: "Portfolio Website",
-      description: "Personal portfolio for creative professionals",
+      title: "Travel Website",
+      description: "Destination discovery platform with flight and accommodation booking",
       category: "Web Design",
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
-      github: "https://github.com/yuanaditya/portfolio",
-      figma: "https://figma.com/file/portfolio"
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
+      github: "https://github.com/yuanaditya/travel-website",
+      figma: "https://figma.com/file/travel-website"
     },
     {
-      title: "Banking App Redesign",
-      description: "Modern interface for digital banking services",
+      title: "Travel App",
+      description: "Mobile companion for trip planning and travel itinerary management",
       category: "Mobile Design",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-      github: "https://github.com/yuanaditya/banking-app",
-      figma: "https://figma.com/file/banking-app"
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
+      github: "https://github.com/yuanaditya/travel-app",
+      figma: "https://figma.com/file/travel-app"
+    },
+    {
+      title: "Recipe Sharing App",
+      description: "Social cooking platform for sharing and discovering recipes",
+      category: "Mobile Design",
+      image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
+      github: "https://github.com/yuanaditya/recipe-sharing",
+      figma: "https://figma.com/file/recipe-sharing"
+    },
+    {
+      title: "Real Estate Platform",
+      description: "Property search and listing platform for buying and renting homes",
+      category: "Web Design",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+      github: "https://github.com/yuanaditya/real-estate",
+      figma: "https://figma.com/file/real-estate"
+    },
+    {
+      title: "Event Booking App",
+      description: "Discover and book tickets for concerts, festivals, and local events",
+      category: "Mobile Design",
+      image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
+      github: "https://github.com/yuanaditya/event-booking",
+      figma: "https://figma.com/file/event-booking"
+    },
+    {
+      title: "Coffee Shop Finder",
+      description: "Location-based app for discovering local cafes and coffee shops",
+      category: "Mobile Design",
+      image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
+      github: "https://github.com/yuanaditya/coffee-finder",
+      figma: "https://figma.com/file/coffee-finder"
+    },
+    {
+      title: "Meditation & Wellness App",
+      description: "Mindfulness and meditation app for mental health and relaxation",
+      category: "Mobile Design",
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      github: "https://github.com/yuanaditya/meditation-app",
+      figma: "https://figma.com/file/meditation-app"
+    },
+    {
+      title: "Hotel Booking Website",
+      description: "Hotel and resort booking platform with reviews and recommendations",
+      category: "Web Design",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+      github: "https://github.com/yuanaditya/hotel-booking",
+      figma: "https://figma.com/file/hotel-booking"
     }
   ];
 
