@@ -2,4 +2,4 @@
 deployment:
 tasks:
 - export DEPLOYPATH=/home/yuanadit/public_html
-- /bin/cp -r * $DEPLOYPATH
+- /bin/cp -r PUBLIC* $DEPLOYPATH
