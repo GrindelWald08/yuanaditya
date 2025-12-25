@@ -1,5 +1,5 @@
 ---
 deployment:
 tasks:
-- export DEPLOYPATH=/home/yuanadit/public_html
+- export DEPLOYPATH=/home/yuanadit/public_html/git
 - /bin/cp -r * $DEPLOYPATH
